@@ -28,7 +28,7 @@ function loginCheck(event){
       window.location.assign('http://127.0.0.1:5501/main.html');
     }else{
       let passError = document.createElement('div');
-      passError.innerText='La contraseña es incorrecta'
+      passError.innerHTML='La contraseña es incorrecta'
       passError.classList.add('alert','alert-danger', 'mt-3')
       let form = document.querySelector('form');
       form.appendChild(passError);
@@ -45,5 +45,6 @@ function loginCheck(event){
       setTimeout(function(){
         form.removeChild(dataError);
       },5000);
+      console.log('asdasdasdasd');
   }
 }
