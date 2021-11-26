@@ -6,10 +6,11 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
 }
-label {
+.label {
   color: white;
 }
 
-.tomato {
-  background-color: tomato;
+.button-without-styles{
+  border: none;
+  background-color: transparent;
 }

@@ -10,15 +10,42 @@
 </head>
 <body>
     <form onsubmit="loginCheck(event)" class="login-container d-flex align-items-center justify-content-center flex-column">
-      <label for="email">Ingresa tu nombre de usuario</label>
+      <label class="label" for="email">Ingresa tu email</label>
       <input class="form-control w-25" type="email" name="email" id="email" required>
-      <label for="pass">Ingresa tu contra</label>
+      <label class="label" for="pass">Ingresa tu contraseña</label>
       <input class="form-control w-25" type="password" name="pass" id="pass" required>
-      <div class="tomato">
       <button type="submit" class="btn btn-success mt-3">Ingresar</button>
-      </div>
-      <a href="" class="text-warning">Si no tenes una cuenta, registrate aquí</a>
+      <button class="button-without-styles text-warning" data-bs-toggle="modal" data-bs-target="#registerModal">Si no tenes una cuenta, registrate aquí</button>
     </form>
+
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <label for="register-email">Ingresa tu email</label>
+              <input class="form-control" type="email" name="register-email" id="register-email" required>
+              <label for="password">Ingresa tu contraseña</label>
+              <input class="form-control" type="password" name="password" id="password" required>
+              <label for="name">Ingresa tu nombre</label>
+              <input class="form-control" type="text" name="name" id="name" required>
+              <label for="lastname">Ingresa tu apellido</label>
+              <input class="form-control" type="text" name="lastname" id="lastname" required>
+              <label for="country">Ingresa tu país</label>
+              <input class="form-control" type="text" name="country" id="country" required>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary">Borrar todo</button>
+            <button type="button" onclick="register()" class="btn btn-success">Registrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   <script src="js/login.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
